@@ -61,7 +61,7 @@
             this.SignIn.Controls.Add(this.inEmail);
             this.SignIn.Controls.Add(this.label2);
             this.SignIn.Controls.Add(this.label1);
-            this.SignIn.Location = new System.Drawing.Point(12, 12);
+            this.SignIn.Location = new System.Drawing.Point(3, -2);
             this.SignIn.Name = "SignIn";
             this.SignIn.Size = new System.Drawing.Size(235, 145);
             this.SignIn.TabIndex = 0;
@@ -76,6 +76,7 @@
             this.btnSignIn.TabIndex = 4;
             this.btnSignIn.Text = "Sign in";
             this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // inPassword
             // 
@@ -105,9 +106,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(35, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Email";
+            this.label1.Text = "Email:";
             // 
             // SignUp
             // 
@@ -126,7 +127,7 @@
             this.SignUp.Controls.Add(this.upName);
             this.SignUp.Controls.Add(this.label4);
             this.SignUp.Controls.Add(this.label3);
-            this.SignUp.Location = new System.Drawing.Point(253, 12);
+            this.SignUp.Location = new System.Drawing.Point(244, -2);
             this.SignUp.Name = "SignUp";
             this.SignUp.Size = new System.Drawing.Size(246, 204);
             this.SignUp.TabIndex = 1;
@@ -162,9 +163,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 170);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Age";
+            this.label7.Text = "Age:";
             // 
             // label8
             // 
@@ -259,11 +260,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 228);
+            this.ClientSize = new System.Drawing.Size(493, 203);
             this.Controls.Add(this.SignUp);
             this.Controls.Add(this.SignIn);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Magazia Programa";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SignIn.ResumeLayout(false);
             this.SignIn.PerformLayout();

@@ -34,6 +34,7 @@ namespace SuperMarketTHEREALONE
             this.Address = Address;                                              //Tada
             this.PhoneNumber = PhoneNumber;
         }
+        public User() { }
     }
 
 }

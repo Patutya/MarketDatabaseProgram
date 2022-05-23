@@ -39,9 +39,13 @@ namespace SuperMarketTHEREALONE
             cmd.ExecuteNonQuery();
             conn.Close();   
         }
-        public static void SelectUsers(string email, string password)
+        public static DataTable SelectUsers()
         {
-
+            cmd = new SqlCommand("SelectUsers", conn);
+            dataAdapter= new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return dt;
         }
     }   
 }

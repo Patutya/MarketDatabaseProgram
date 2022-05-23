@@ -31,25 +31,25 @@
             this.SignIn = new System.Windows.Forms.GroupBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.inPassword = new System.Windows.Forms.TextBox();
-            this.inUser = new System.Windows.Forms.TextBox();
+            this.inEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SignUp = new System.Windows.Forms.GroupBox();
-            this.upSurname = new System.Windows.Forms.TextBox();
-            this.upName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.upPassword = new System.Windows.Forms.TextBox();
-            this.upEmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.upAge = new System.Windows.Forms.TextBox();
             this.upAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.upPhone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnSignUp = new System.Windows.Forms.Button();
+            this.upPassword = new System.Windows.Forms.TextBox();
+            this.upEmail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.upSurname = new System.Windows.Forms.TextBox();
+            this.upName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SignIn.SuspendLayout();
             this.SignUp.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             this.SignIn.Controls.Add(this.btnSignIn);
             this.SignIn.Controls.Add(this.inPassword);
-            this.SignIn.Controls.Add(this.inUser);
+            this.SignIn.Controls.Add(this.inEmail);
             this.SignIn.Controls.Add(this.label2);
             this.SignIn.Controls.Add(this.label1);
             this.SignIn.Location = new System.Drawing.Point(12, 12);
@@ -84,12 +84,12 @@
             this.inPassword.Size = new System.Drawing.Size(100, 20);
             this.inPassword.TabIndex = 3;
             // 
-            // inUser
+            // inEmail
             // 
-            this.inUser.Location = new System.Drawing.Point(94, 38);
-            this.inUser.Name = "inUser";
-            this.inUser.Size = new System.Drawing.Size(100, 20);
-            this.inUser.TabIndex = 2;
+            this.inEmail.Location = new System.Drawing.Point(94, 38);
+            this.inEmail.Name = "inEmail";
+            this.inEmail.Size = new System.Drawing.Size(100, 20);
+            this.inEmail.TabIndex = 2;
             // 
             // label2
             // 
@@ -107,7 +107,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "User:";
+            this.label1.Text = "Email";
             // 
             // SignUp
             // 
@@ -133,69 +133,15 @@
             this.SignUp.TabStop = false;
             this.SignUp.Text = "Sign Up";
             // 
-            // upSurname
+            // btnSignUp
             // 
-            this.upSurname.Location = new System.Drawing.Point(64, 41);
-            this.upSurname.Name = "upSurname";
-            this.upSurname.Size = new System.Drawing.Size(100, 20);
-            this.upSurname.TabIndex = 8;
-            // 
-            // upName
-            // 
-            this.upName.Location = new System.Drawing.Point(64, 19);
-            this.upName.Name = "upName";
-            this.upName.Size = new System.Drawing.Size(100, 20);
-            this.upName.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Surname:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Name:";
-            // 
-            // upPassword
-            // 
-            this.upPassword.Location = new System.Drawing.Point(64, 93);
-            this.upPassword.Name = "upPassword";
-            this.upPassword.Size = new System.Drawing.Size(100, 20);
-            this.upPassword.TabIndex = 12;
-            // 
-            // upEmail
-            // 
-            this.upEmail.Location = new System.Drawing.Point(64, 67);
-            this.upEmail.Name = "upEmail";
-            this.upEmail.Size = new System.Drawing.Size(100, 20);
-            this.upEmail.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 93);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Password:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Email:";
+            this.btnSignUp.Location = new System.Drawing.Point(165, 19);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(75, 23);
+            this.btnSignUp.TabIndex = 5;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // upAge
             // 
@@ -245,15 +191,69 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Phone:";
             // 
-            // btnSignUp
+            // upPassword
             // 
-            this.btnSignUp.Location = new System.Drawing.Point(165, 19);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(75, 23);
-            this.btnSignUp.TabIndex = 5;
-            this.btnSignUp.Text = "Sign Up";
-            this.btnSignUp.UseVisualStyleBackColor = true;
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            this.upPassword.Location = new System.Drawing.Point(64, 93);
+            this.upPassword.Name = "upPassword";
+            this.upPassword.Size = new System.Drawing.Size(100, 20);
+            this.upPassword.TabIndex = 12;
+            // 
+            // upEmail
+            // 
+            this.upEmail.Location = new System.Drawing.Point(64, 67);
+            this.upEmail.Name = "upEmail";
+            this.upEmail.Size = new System.Drawing.Size(100, 20);
+            this.upEmail.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Password:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Email:";
+            // 
+            // upSurname
+            // 
+            this.upSurname.Location = new System.Drawing.Point(64, 41);
+            this.upSurname.Name = "upSurname";
+            this.upSurname.Size = new System.Drawing.Size(100, 20);
+            this.upSurname.TabIndex = 8;
+            // 
+            // upName
+            // 
+            this.upName.Location = new System.Drawing.Point(64, 19);
+            this.upName.Name = "upName";
+            this.upName.Size = new System.Drawing.Size(100, 20);
+            this.upName.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Name:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Surname:";
             // 
             // Form1
             // 
@@ -279,7 +279,7 @@
         private System.Windows.Forms.GroupBox SignUp;
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.TextBox inPassword;
-        private System.Windows.Forms.TextBox inUser;
+        private System.Windows.Forms.TextBox inEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSignUp;

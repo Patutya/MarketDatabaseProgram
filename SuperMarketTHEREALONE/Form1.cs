@@ -7,6 +7,10 @@ namespace SuperMarketTHEREALONE
 {
     public partial class Form1 : Form
     {
+        string admin = "diaxmas@gisment.mz";
+        string pass = "michedavs";
+
+
         List<User> Users = new List<User>();
         public Form1()
         {
@@ -58,24 +62,68 @@ namespace SuperMarketTHEREALONE
         }
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            bool isLoggedIn = false;
-            LoadUsers();
-            foreach (User user in Users)
+            if(admin == inEmail.Text && pass == inPassword.Text)
             {
-                if(user.Email == inEmail.Text && user.Password == inPassword.Text)
+                Admin admin = new Admin ();
+                admin.Show();
+                this.Hide();
+            }
+            else
+            {
+                bool isLoggedIn = false;
+                LoadUsers();
+                foreach (User user in Users)
                 {
-                    //naklebia dasaweri
-                    isLoggedIn = true;
+                    if (user.Email == inEmail.Text && user.Password == inPassword.Text)
+                    {
+                        //naklebia dasaweri: getanxmebi
+
+                        isLoggedIn = true;
+                    }
+
+                }
+                if (!isLoggedIn)
+                {
+                    MessageBox.Show("vershexvedit ");
+                }
+                else
+                {
                     Shop shop = new Shop();
                     shop.Show();
                     this.Hide();
                 }
-                
-            }
-            if (!isLoggedIn)
-            {
-                MessageBox.Show("vershexvedit ");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        
     }
 }
+/*
+ 
+ string admin = "giosaba@mail"
+
+
+if(intxt == admin)
+{
+
+
+
+
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ */

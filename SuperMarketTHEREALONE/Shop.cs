@@ -16,5 +16,15 @@ namespace SuperMarketTHEREALONE
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            shoplist.Text += "\n ITEM: TROJAN";
+        }
     }
 }

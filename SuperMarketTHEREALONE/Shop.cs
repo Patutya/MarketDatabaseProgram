@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,8 +46,21 @@ namespace SuperMarketTHEREALONE
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Cart cart = new Cart();
-            cart.Show();
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("sabaliluashvili@mziuri.ge");
+                mail.To.Add(textBox1.Text);
+                mail.Subject = "U just signed up for a 5k$ profit";
+                mail.Body = cart;
+                mail.IsBodyHtml = true;
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new System.Net.NetworkCredential("sabaliluashvili@mziuri.ge", "MZIURI2015");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    textBox1.Text = "SENT";
+                }
+            }
         }
     }
 }

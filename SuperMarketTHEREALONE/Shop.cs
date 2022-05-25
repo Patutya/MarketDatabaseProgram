@@ -12,6 +12,9 @@ namespace SuperMarketTHEREALONE
 {
     public partial class Shop : Form
     {
+        string cart = "";
+        double full = 0;   
+
         public Shop()
         {
             InitializeComponent();
@@ -22,9 +25,28 @@ namespace SuperMarketTHEREALONE
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Add1_Click(object sender, EventArgs e)
         {
-            shoplist.Text += "\n ITEM: TROJAN";
+            cart += "\n VIRUS: TROJAN 199.99$ "; 
+            full += 199.99;
+        }
+
+        private void Add2_Click(object sender, EventArgs e)
+        {
+            cart += "\n VIRUS: BONZI 37.99$"; 
+            full += 37.99;
+        }
+
+        private void Add3_Click(object sender, EventArgs e)
+        {
+            cart += "\n VIRUS: I LOVE YOU 247.99$";
+            full += 247.99;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cart cart = new Cart();
+            cart.Show();
         }
     }
 }

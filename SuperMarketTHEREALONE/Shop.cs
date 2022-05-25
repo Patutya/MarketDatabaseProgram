@@ -12,8 +12,8 @@ namespace SuperMarketTHEREALONE
 {
     public partial class Shop : Form
     {
-        string cart = "";
-        double full = 0;   
+        public string cart = "";
+        public double full = 0;   
 
         public Shop()
         {

@@ -12,12 +12,15 @@ namespace SuperMarketTHEREALONE
 {
     public partial class Cart : Form
     {
-        string cart = "";
-        double full = 0;
         public string Cart
         {
             get { return Cart; }   
             set { Cart = shop.cart; }  
+        }
+        public string Full
+        {
+            get { return Full; }
+            set { Full = shop.cart; }
         }
 
 

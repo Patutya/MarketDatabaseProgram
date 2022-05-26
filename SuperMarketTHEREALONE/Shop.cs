@@ -46,7 +46,16 @@ namespace SuperMarketTHEREALONE
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (MailMessage mail = new MailMessage())
+        }
+    }
+}
+
+
+
+
+
+/*            MAIL SENDER
+             using (MailMessage mail = new MailMessage())
             {
                 mail.From = new MailAddress("sabaliluashvili@mziuri.ge");
                 mail.To.Add(textBox1.Text);
@@ -61,6 +70,6 @@ namespace SuperMarketTHEREALONE
                     textBox1.Text = "SENT";
                 }
             }
-        }
-    }
-}
+ 
+ 
+ */

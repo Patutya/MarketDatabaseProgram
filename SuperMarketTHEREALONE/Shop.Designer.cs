@@ -43,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -78,9 +77,9 @@
             this.groupBox1.BackColor = System.Drawing.Color.BlueViolet;
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(45, 49);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(268, 404);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -89,8 +88,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 58);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(241, 251);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,9 +101,9 @@
             this.groupBox2.BackColor = System.Drawing.Color.BlueViolet;
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Location = new System.Drawing.Point(392, 49);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(279, 404);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -113,8 +112,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(14, 58);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(18, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(241, 251);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -126,9 +125,9 @@
             this.groupBox3.BackColor = System.Drawing.Color.BlueViolet;
             this.groupBox3.Controls.Add(this.pictureBox3);
             this.groupBox3.Location = new System.Drawing.Point(755, 49);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(260, 404);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
@@ -137,10 +136,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 58);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(13, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(241, 251);
+            this.pictureBox3.Size = new System.Drawing.Size(234, 251);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -152,10 +151,10 @@
             this.Add1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add1.ForeColor = System.Drawing.Color.Black;
             this.Add1.Image = ((System.Drawing.Image)(resources.GetObject("Add1.Image")));
-            this.Add1.Location = new System.Drawing.Point(257, 457);
-            this.Add1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add1.Location = new System.Drawing.Point(249, 457);
+            this.Add1.Margin = new System.Windows.Forms.Padding(2);
             this.Add1.Name = "Add1";
-            this.Add1.Size = new System.Drawing.Size(56, 48);
+            this.Add1.Size = new System.Drawing.Size(64, 48);
             this.Add1.TabIndex = 4;
             this.Add1.Text = "Add2Cart";
             this.Add1.UseVisualStyleBackColor = false;
@@ -167,10 +166,10 @@
             this.Add2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Add2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add2.Image = ((System.Drawing.Image)(resources.GetObject("Add2.Image")));
-            this.Add2.Location = new System.Drawing.Point(614, 457);
-            this.Add2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add2.Location = new System.Drawing.Point(604, 457);
+            this.Add2.Margin = new System.Windows.Forms.Padding(2);
             this.Add2.Name = "Add2";
-            this.Add2.Size = new System.Drawing.Size(56, 48);
+            this.Add2.Size = new System.Drawing.Size(67, 48);
             this.Add2.TabIndex = 5;
             this.Add2.Text = "Add2Cart";
             this.Add2.UseVisualStyleBackColor = true;
@@ -181,10 +180,10 @@
             this.Add3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Add3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add3.Image = ((System.Drawing.Image)(resources.GetObject("Add3.Image")));
-            this.Add3.Location = new System.Drawing.Point(959, 457);
-            this.Add3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add3.Location = new System.Drawing.Point(948, 457);
+            this.Add3.Margin = new System.Windows.Forms.Padding(2);
             this.Add3.Name = "Add3";
-            this.Add3.Size = new System.Drawing.Size(56, 48);
+            this.Add3.Size = new System.Drawing.Size(67, 48);
             this.Add3.TabIndex = 6;
             this.Add3.Text = "Add2Cart";
             this.Add3.UseVisualStyleBackColor = true;
@@ -229,20 +228,12 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "PRICE : 247.99$";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(762, 611);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 20);
-            this.textBox1.TabIndex = 10;
-            // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1098, 644);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -284,6 +275,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

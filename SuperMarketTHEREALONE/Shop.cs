@@ -46,6 +46,8 @@ namespace SuperMarketTHEREALONE
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Cart cart = new Cart(cart,full);
+            cart.Show();
         }
     }
 }

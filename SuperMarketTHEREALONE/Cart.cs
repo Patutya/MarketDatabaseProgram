@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace SuperMarketTHEREALONE
 {
-    public partial class Cart : Form
+    public partial class Cart : Form()
     {
-        public Cart()
+        string Cart;
+        double full;
+        public Cart(string cart,double full)
         {
             InitializeComponent();
+
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

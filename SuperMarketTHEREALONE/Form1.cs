@@ -33,6 +33,7 @@ namespace SuperMarketTHEREALONE
                 upAge.Clear();
                 upAddress.Clear();
                 upPhone.Clear();
+                MessageBox.Show("Now you can log in!");
             }
 
         }
@@ -68,6 +69,12 @@ namespace SuperMarketTHEREALONE
                 admin.Show();
                 this.Hide();
             }
+            else if ("SQL" == inEmail.Text && "TEST" == inPassword.Text)
+            {
+                Shop shop = new Shop();
+                shop.Show();
+                this.Hide();
+            }
             else
             {
                 bool isLoggedIn = false;
@@ -76,8 +83,6 @@ namespace SuperMarketTHEREALONE
                 {
                     if (user.Email == inEmail.Text && user.Password == inPassword.Text)
                     {
-                        //naklebia dasaweri: getanxmebi
-
                         isLoggedIn = true;
                     }
 

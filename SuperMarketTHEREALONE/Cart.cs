@@ -32,7 +32,7 @@ namespace SuperMarketTHEREALONE
                 {
                     mail.From = new MailAddress("diaxmasgisment@gmail.com");
                     mail.To.Add(Emailtxt.Text);
-                    mail.Subject = Nametxt.Text + Surnametxt.Text + "Receipt for the purchase:";
+                    mail.Subject = Nametxt.Text +" "+ Surnametxt.Text + " Receipt for the purchase:";
                     mail.Body = "Are you trying to buy the follow items: \n" + cart + "\n" + Convert.ToString(full) + "$$\n";
                     mail.IsBodyHtml = true;
                     using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
@@ -41,6 +41,7 @@ namespace SuperMarketTHEREALONE
                         smtp.EnableSsl = true;
                         smtp.Send(mail);
                         label1.Text = "SENT";
+                        label2.Text = "THANK YOU FOR THE PURCHASE <3";
                     }
                 }
             }

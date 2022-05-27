@@ -47,9 +47,9 @@
             // CartTxt
             // 
             this.CartTxt.Location = new System.Drawing.Point(31, 21);
-            this.CartTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CartTxt.Margin = new System.Windows.Forms.Padding(2);
             this.CartTxt.Name = "CartTxt";
-            this.CartTxt.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CartTxt.Padding = new System.Windows.Forms.Padding(2);
             this.CartTxt.Size = new System.Drawing.Size(466, 481);
             this.CartTxt.TabIndex = 0;
             this.CartTxt.TabStop = false;
@@ -63,7 +63,7 @@
             this.btnBuy.ForeColor = System.Drawing.Color.Crimson;
             this.btnBuy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuy.Location = new System.Drawing.Point(70, 210);
-            this.btnBuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(174, 32);
             this.btnBuy.TabIndex = 1;
@@ -74,7 +74,7 @@
             // Surnametxt
             // 
             this.Surnametxt.Location = new System.Drawing.Point(121, 142);
-            this.Surnametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Surnametxt.Margin = new System.Windows.Forms.Padding(2);
             this.Surnametxt.Name = "Surnametxt";
             this.Surnametxt.Size = new System.Drawing.Size(124, 20);
             this.Surnametxt.TabIndex = 2;
@@ -82,7 +82,7 @@
             // Nametxt
             // 
             this.Nametxt.Location = new System.Drawing.Point(121, 103);
-            this.Nametxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Nametxt.Margin = new System.Windows.Forms.Padding(2);
             this.Nametxt.Name = "Nametxt";
             this.Nametxt.Size = new System.Drawing.Size(124, 20);
             this.Nametxt.TabIndex = 3;
@@ -90,7 +90,7 @@
             // Emailtxt
             // 
             this.Emailtxt.Location = new System.Drawing.Point(128, 182);
-            this.Emailtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Emailtxt.Margin = new System.Windows.Forms.Padding(2);
             this.Emailtxt.Name = "Emailtxt";
             this.Emailtxt.Size = new System.Drawing.Size(124, 20);
             this.Emailtxt.TabIndex = 4;
@@ -138,9 +138,9 @@
             this.groupBox2.Controls.Add(this.LbName);
             this.groupBox2.Controls.Add(this.Emailtxt);
             this.groupBox2.Location = new System.Drawing.Point(532, 241);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(278, 261);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
@@ -186,9 +186,8 @@
             this.label2.Location = new System.Drawing.Point(528, 514);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(363, 25);
+            this.label2.Size = new System.Drawing.Size(0, 25);
             this.label2.TabIndex = 13;
-            this.label2.Text = "THANK YOU FOR THE PURCHASE <3";
             // 
             // Cart
             // 

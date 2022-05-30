@@ -9,14 +9,11 @@ namespace SuperMarketTHEREALONE
     {
         string admin = "diaxmas@gisment.mz";
         string pass = "michedavs";
-
-
         List<User> Users = new List<User>();
         public Form1()
         {
             InitializeComponent();
         }
-
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             if (upName.Text == "" || upSurname.Text == "" || upEmail.Text == "" || upPassword.Text == "" || upAge.Text == "" || upAddress.Text == "" || upPhone.Text == "")
@@ -35,9 +32,7 @@ namespace SuperMarketTHEREALONE
                 upPhone.Clear();
                 MessageBox.Show("Now you can log in!");
             }
-
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             upPassword.PasswordChar = '*';
@@ -63,9 +58,9 @@ namespace SuperMarketTHEREALONE
         }
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            if(admin == inEmail.Text && pass == inPassword.Text)
+            if (admin == inEmail.Text && pass == inPassword.Text)
             {
-                Admin admin = new Admin ();
+                Admin admin = new Admin();
                 admin.Show();
                 this.Hide();
             }
@@ -99,11 +94,9 @@ namespace SuperMarketTHEREALONE
                 }
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        
     }
 }

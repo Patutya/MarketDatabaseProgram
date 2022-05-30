@@ -47,5 +47,13 @@ namespace SuperMarketTHEREALONE
             dataAdapter.Fill(dt);
             return dt;
         }
+        public static DataTable SelectProducts()
+        {
+            cmd = new SqlCommand("SelectProducts", conn);
+            dataAdapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return dt;
+        }
     }   
 }

@@ -107,28 +107,3 @@ namespace SuperMarketTHEREALONE
         
     }
 }
-/*
- 
- string admin = "giosaba@mail"
-
-
-if(intxt == admin)
-{
-
-
-
-
-}
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- */

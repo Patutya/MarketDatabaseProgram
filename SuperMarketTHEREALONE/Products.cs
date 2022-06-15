@@ -18,5 +18,6 @@
             this.ProductQuantity = Quantity;
             this.ProductImage = Image;
         }
+        public Products() { }
     }
 }

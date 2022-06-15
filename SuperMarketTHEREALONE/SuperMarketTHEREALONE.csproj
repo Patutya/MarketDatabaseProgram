@@ -52,11 +52,23 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminProducts.Designer.cs">
+      <DependentUpon>AdminProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cart.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cart.Designer.cs">
       <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forgor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgor.Designer.cs">
+      <DependentUpon>Forgor.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -74,6 +86,11 @@
       <DependentUpon>Shop.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLProcedures.cs" />
+    <Compile Include="SuperMarket.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuperMarket.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SuperMarketDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,8 +100,14 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminProducts.resx">
+      <DependentUpon>AdminProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgor.resx">
+      <DependentUpon>Forgor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -110,6 +133,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SuperMarket.xsc">
+      <DependentUpon>SuperMarket.xsd</DependentUpon>
+    </None>
+    <None Include="SuperMarket.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuperMarket.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SuperMarket.xss">
+      <DependentUpon>SuperMarket.xsd</DependentUpon>
+    </None>
     <None Include="SuperMarketDataSet.xsc">
       <DependentUpon>SuperMarketDataSet.xsd</DependentUpon>
     </None>

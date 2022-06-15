@@ -5,8 +5,10 @@ using System.Windows.Forms;
 
 namespace SuperMarketTHEREALONE
 {
+
     public partial class Form1 : Form
     {
+        User logedIn = new User();
         string admin = "diaxmas@gisment.mz";
         string pass = "michedavs";
         List<User> Users = new List<User>();
@@ -45,6 +47,7 @@ namespace SuperMarketTHEREALONE
             {
                 var row = teibl.Rows[i];
                 User user = new User();
+                bool canAdd = true;
                 user.ID = Convert.ToInt32(row["UserID"]);
                 user.Name = Convert.ToString(row["UserName"]);
                 user.Surname = Convert.ToString(row["UserSurname"]);
@@ -53,7 +56,18 @@ namespace SuperMarketTHEREALONE
                 user.Age = Convert.ToInt32(row["UserAge"]);
                 user.Address = Convert.ToString(row["UserAddress"]);
                 user.PhoneNumber = Convert.ToInt32(row["UserPhoneNumber"]);
-                Users.Add(user);
+                foreach (User currnetUser in Users)
+                {
+                    if (currnetUser.ID == user.ID)
+                    {
+                        canAdd = false;
+                        break;
+                    }
+                }
+                if (canAdd)
+                {
+                    Users.Add(user);
+                }
             }
         }
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -72,13 +86,19 @@ namespace SuperMarketTHEREALONE
             }
             else
             {
+
                 bool isLoggedIn = false;
                 LoadUsers();
+
                 foreach (User user in Users)
                 {
                     if (user.Email == inEmail.Text && user.Password == inPassword.Text)
                     {
                         isLoggedIn = true;
+                        Shop shop = new Shop(user);
+                        shop.Show();
+                        this.Hide();
+                        break;
                     }
 
                 }
@@ -86,17 +106,18 @@ namespace SuperMarketTHEREALONE
                 {
                     MessageBox.Show("vershexvedit ");
                 }
-                else
-                {
-                    Shop shop = new Shop();
-                    shop.Show();
-                    this.Hide();
-                }
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Forgor_Click(object sender, EventArgs e)
+        {
+            Forgor forgor = new Forgor();
+            forgor.Show();
+            this.Hide();
         }
     }
 }

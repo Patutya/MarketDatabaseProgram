@@ -51,12 +51,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Forgor = new System.Windows.Forms.Button();
             this.SignIn.SuspendLayout();
             this.SignUp.SuspendLayout();
             this.SuspendLayout();
             // 
             // SignIn
             // 
+            this.SignIn.Controls.Add(this.Forgor);
             this.SignIn.Controls.Add(this.btnSignIn);
             this.SignIn.Controls.Add(this.inPassword);
             this.SignIn.Controls.Add(this.inEmail);
@@ -267,6 +269,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Forgor
+            // 
+            this.Forgor.Location = new System.Drawing.Point(10, 118);
+            this.Forgor.Name = "Forgor";
+            this.Forgor.Size = new System.Drawing.Size(117, 20);
+            this.Forgor.TabIndex = 5;
+            this.Forgor.Text = "dagaviwyda parole?";
+            this.Forgor.UseVisualStyleBackColor = true;
+            this.Forgor.Click += new System.EventHandler(this.Forgor_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +323,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Forgor;
     }
 }
 

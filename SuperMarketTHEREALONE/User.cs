@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperMarketTHEREALONE
 {
-    internal class User
+    public class User
     {
         public int ID { get; set; }
 
@@ -31,7 +31,7 @@ namespace SuperMarketTHEREALONE
             this.Email = Email;
             this.Password = Password;
             this.Age = Age;
-            this.Address = Address;                                              //Tada
+            this.Address = Address;                                              
             this.PhoneNumber = PhoneNumber;
         }
         public User() { }

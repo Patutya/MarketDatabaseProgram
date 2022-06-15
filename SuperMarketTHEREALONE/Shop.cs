@@ -11,13 +11,17 @@ using System.Windows.Forms;
 
 namespace SuperMarketTHEREALONE
 {
+    
     public partial class Shop : Form
     {
+
         public string cart = "";
         public double full = 0;   
-
-        public Shop()
+        public User user = new User();
+        public Shop() { InitializeComponent(); }
+        public Shop(User user)
         {
+            this.user = user;
             InitializeComponent();
         }
 

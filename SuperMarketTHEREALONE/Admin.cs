@@ -22,24 +22,32 @@ namespace SuperMarketTHEREALONE
             Application.Exit();
         }
 
-        private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.usersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.superMarketDataSet);
-
-        }
-
         private void Admin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'superMarketDataSet.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.superMarketDataSet.Users);
-
+            // TODO: This line of code loads data into the 'superMarket.Cart' table. You can move, or remove it, as needed.
+            this.cartTableAdapter.Fill(this.superMarket.Cart);
+            // TODO: This line of code loads data into the 'superMarket.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.superMarket.Users);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Application.Restart(); //tadaaaaa
+        }
+
+        private void productsBTN_Click(object sender, EventArgs e)
+        {
+            AdminProducts pro = new AdminProducts();
+            pro.Show();
+            this.Hide();
+        }
+
+        private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.superMarket);
+
         }
     }
 }

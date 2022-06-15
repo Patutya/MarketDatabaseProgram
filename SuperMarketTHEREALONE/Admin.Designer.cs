@@ -32,9 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.button1 = new System.Windows.Forms.Button();
             this.superMarketDataSet = new SuperMarketTHEREALONE.SuperMarketDataSet();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.productsBTN = new System.Windows.Forms.Button();
+            this.superMarket = new SuperMarketTHEREALONE.SuperMarket();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new SuperMarketTHEREALONE.SuperMarketDataSetTableAdapters.UsersTableAdapter();
-            this.tableAdapterManager = new SuperMarketTHEREALONE.SuperMarketDataSetTableAdapters.TableAdapterManager();
+            this.usersTableAdapter = new SuperMarketTHEREALONE.SuperMarketTableAdapters.UsersTableAdapter();
+            this.tableAdapterManager = new SuperMarketTHEREALONE.SuperMarketTableAdapters.TableAdapterManager();
             this.usersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -57,12 +60,19 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnLogOut = new System.Windows.Forms.Button();
+            this.cartBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cartTableAdapter = new SuperMarketTHEREALONE.SuperMarketTableAdapters.CartTableAdapter();
+            this.cartDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.superMarketDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.superMarket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingNavigator)).BeginInit();
             this.usersBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -80,10 +90,35 @@
             this.superMarketDataSet.DataSetName = "SuperMarketDataSet";
             this.superMarketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(1052, 441);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.TabIndex = 3;
+            this.btnLogOut.Text = "LogOut";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // productsBTN
+            // 
+            this.productsBTN.Location = new System.Drawing.Point(971, 441);
+            this.productsBTN.Name = "productsBTN";
+            this.productsBTN.Size = new System.Drawing.Size(75, 23);
+            this.productsBTN.TabIndex = 4;
+            this.productsBTN.Text = "Products";
+            this.productsBTN.UseVisualStyleBackColor = true;
+            this.productsBTN.Click += new System.EventHandler(this.productsBTN_Click);
+            // 
+            // superMarket
+            // 
+            this.superMarket.DataSetName = "SuperMarket";
+            this.superMarket.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.superMarketDataSet;
+            this.usersBindingSource.DataSource = this.superMarket;
             // 
             // usersTableAdapter
             // 
@@ -92,7 +127,10 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = SuperMarketTHEREALONE.SuperMarketDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.CartTableAdapter = this.cartTableAdapter;
+            this.tableAdapterManager.ProductCartConnectorTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SuperMarketTHEREALONE.SuperMarketTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
             // 
             // usersBindingNavigator
@@ -121,8 +159,8 @@
             this.usersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.usersBindingNavigator.Name = "usersBindingNavigator";
             this.usersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.usersBindingNavigator.Size = new System.Drawing.Size(865, 25);
-            this.usersBindingNavigator.TabIndex = 1;
+            this.usersBindingNavigator.Size = new System.Drawing.Size(1127, 25);
+            this.usersBindingNavigator.TabIndex = 5;
             this.usersBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
@@ -152,7 +190,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -161,14 +198,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -176,7 +213,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -185,13 +222,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -208,7 +245,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // usersBindingNavigatorSaveItem
@@ -216,7 +253,7 @@
             this.usersBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.usersBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("usersBindingNavigatorSaveItem.Image")));
             this.usersBindingNavigatorSaveItem.Name = "usersBindingNavigatorSaveItem";
-            this.usersBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.usersBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             this.usersBindingNavigatorSaveItem.Text = "Save Data";
             this.usersBindingNavigatorSaveItem.Click += new System.EventHandler(this.usersBindingNavigatorSaveItem_Click);
             // 
@@ -234,10 +271,10 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.usersDataGridView.DataSource = this.usersBindingSource;
-            this.usersDataGridView.Location = new System.Drawing.Point(12, 28);
+            this.usersDataGridView.Location = new System.Drawing.Point(13, 28);
             this.usersDataGridView.Name = "usersDataGridView";
-            this.usersDataGridView.Size = new System.Drawing.Size(846, 393);
-            this.usersDataGridView.TabIndex = 2;
+            this.usersDataGridView.Size = new System.Drawing.Size(844, 394);
+            this.usersDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -288,34 +325,64 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "UserPhoneNumber";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // btnLogOut
+            // cartBindingSource
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(782, 432);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.btnLogOut.TabIndex = 3;
-            this.btnLogOut.Text = "LogOut";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            this.cartBindingSource.DataMember = "FK_Cart_Users";
+            this.cartBindingSource.DataSource = this.usersBindingSource;
+            // 
+            // cartTableAdapter
+            // 
+            this.cartTableAdapter.ClearBeforeFill = true;
+            // 
+            // cartDataGridView
+            // 
+            this.cartDataGridView.AutoGenerateColumns = false;
+            this.cartDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cartDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.cartDataGridView.DataSource = this.cartBindingSource;
+            this.cartDataGridView.Location = new System.Drawing.Point(863, 28);
+            this.cartDataGridView.Name = "cartDataGridView";
+            this.cartDataGridView.Size = new System.Drawing.Size(248, 394);
+            this.cartDataGridView.TabIndex = 5;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "CartID";
+            this.dataGridViewTextBoxColumn9.HeaderText = "CartID";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "UserID";
+            this.dataGridViewTextBoxColumn10.HeaderText = "UserID";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 458);
-            this.Controls.Add(this.btnLogOut);
+            this.ClientSize = new System.Drawing.Size(1127, 476);
+            this.Controls.Add(this.cartDataGridView);
             this.Controls.Add(this.usersDataGridView);
             this.Controls.Add(this.usersBindingNavigator);
+            this.Controls.Add(this.productsBTN);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.button1);
             this.Name = "Admin";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.superMarketDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.superMarket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingNavigator)).EndInit();
             this.usersBindingNavigator.ResumeLayout(false);
             this.usersBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,9 +392,12 @@
 
         private System.Windows.Forms.Button button1;
         private SuperMarketDataSet superMarketDataSet;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button productsBTN;
+        private SuperMarket superMarket;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private SuperMarketDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
-        private SuperMarketDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private SuperMarketTableAdapters.UsersTableAdapter usersTableAdapter;
+        private SuperMarketTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator usersBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -341,6 +411,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton usersBindingNavigatorSaveItem;
+        private SuperMarketTableAdapters.CartTableAdapter cartTableAdapter;
         private System.Windows.Forms.DataGridView usersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -350,6 +421,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.BindingSource cartBindingSource;
+        private System.Windows.Forms.DataGridView cartDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

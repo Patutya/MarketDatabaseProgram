@@ -222,6 +222,11 @@
             // 
             this.productPriceNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource, "ProductPrice", true));
             this.productPriceNumericUpDown.Location = new System.Drawing.Point(788, 80);
+            this.productPriceNumericUpDown.Maximum = new decimal(new int[] {
+            2000000,
+            0,
+            0,
+            0});
             this.productPriceNumericUpDown.Name = "productPriceNumericUpDown";
             this.productPriceNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.productPriceNumericUpDown.TabIndex = 7;
@@ -230,6 +235,11 @@
             // 
             this.productQuantityNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource, "ProductQuantity", true));
             this.productQuantityNumericUpDown.Location = new System.Drawing.Point(788, 106);
+            this.productQuantityNumericUpDown.Maximum = new decimal(new int[] {
+            2000000,
+            0,
+            0,
+            0});
             this.productQuantityNumericUpDown.Name = "productQuantityNumericUpDown";
             this.productQuantityNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.productQuantityNumericUpDown.TabIndex = 9;
@@ -242,6 +252,7 @@
             this.ImageBox.Size = new System.Drawing.Size(120, 76);
             this.ImageBox.TabIndex = 11;
             this.ImageBox.TabStop = false;
+            this.ImageBox.Click += new System.EventHandler(this.ImageBox_Click);
             // 
             // btn_upload
             // 
@@ -280,6 +291,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";

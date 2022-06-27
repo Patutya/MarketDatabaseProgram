@@ -24,15 +24,13 @@ namespace SuperMarketTHEREALONE
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'superMarket.Cart' table. You can move, or remove it, as needed.
-            this.cartTableAdapter.Fill(this.superMarket.Cart);
-            // TODO: This line of code loads data into the 'superMarket.Users' table. You can move, or remove it, as needed.
+            this.cartTableAdapter.Fill(this.superMarket.Cart); 
             this.usersTableAdapter.Fill(this.superMarket.Users);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            Application.Restart(); //tadaaaaa
+            Application.Restart();
         }
 
         private void productsBTN_Click(object sender, EventArgs e)

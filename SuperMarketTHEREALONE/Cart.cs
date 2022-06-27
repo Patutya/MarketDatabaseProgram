@@ -37,7 +37,7 @@ namespace SuperMarketTHEREALONE
                     mail.IsBodyHtml = true;
                     using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                     {
-                        smtp.Credentials = new System.Net.NetworkCredential("diaxmasgisment@gmail.com", "michedavs");
+                        smtp.Credentials = new System.Net.NetworkCredential("diaxmasgisment@gmail.com", "aahxiqrahabgdthl");
                         smtp.EnableSsl = true;
                         smtp.Send(mail);
                         label1.Text = "SENT";

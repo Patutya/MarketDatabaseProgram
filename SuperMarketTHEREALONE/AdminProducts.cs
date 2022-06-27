@@ -48,5 +48,10 @@ namespace SuperMarketTHEREALONE
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ImageBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

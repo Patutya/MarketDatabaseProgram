@@ -9,14 +9,14 @@
         public int ProductQuantity { get; set; }
         public byte[] ProductImage { get; set; }
 
-        public Products(int ID,string Name,string Summary,double Price,int Quantity, byte[] Image)
+        public Products(int ProductID, string ProductName, string ProductSummary, double ProductPrice, int ProductQuantity, byte[] ProductImage)
         {
-            this.ProductID = ID;
-            this.ProductName = Name;
-            this.ProductSummary = Summary;  
-            this.ProductPrice = Price;
-            this.ProductQuantity = Quantity;
-            this.ProductImage = Image;
+            this.ProductID = ProductID;
+            this.ProductName = ProductName;
+            this.ProductSummary = ProductSummary;  
+            this.ProductPrice = ProductPrice;
+            this.ProductQuantity = ProductQuantity;
+            this.ProductImage = ProductImage;
         }
         public Products() { }
     }

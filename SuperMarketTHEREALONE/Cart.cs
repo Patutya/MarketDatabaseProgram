@@ -33,7 +33,7 @@ namespace SuperMarketTHEREALONE
                     mail.From = new MailAddress("diaxmasgisment@gmail.com");
                     mail.To.Add(Emailtxt.Text);
                     mail.Subject = Nametxt.Text +" "+ Surnametxt.Text + " Receipt for the purchase:";
-                    mail.Body = "Are you trying to buy the follow items: \n" + cart + "\n" + Convert.ToString(full) + "$$\n";
+                    mail.Body = "Are you trying to buy the following items: \n" + cart + "\n" + Convert.ToString(full) + "$$\n";
                     mail.IsBodyHtml = true;
                     using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                     {

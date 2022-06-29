@@ -41,11 +41,13 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.CartTxt.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // CartTxt
             // 
+            this.CartTxt.Controls.Add(this.label1);
             this.CartTxt.Location = new System.Drawing.Point(31, 21);
             this.CartTxt.Margin = new System.Windows.Forms.Padding(2);
             this.CartTxt.Name = "CartTxt";
@@ -171,7 +173,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Light", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, -1);
+            this.label1.Location = new System.Drawing.Point(-5, 451);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 30);
@@ -195,7 +197,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 566);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.LbTotal);
             this.Controls.Add(this.groupBox2);
@@ -203,6 +204,8 @@
             this.Name = "Cart";
             this.Text = "Cart";
             this.Load += new System.EventHandler(this.Cart_Load);
+            this.CartTxt.ResumeLayout(false);
+            this.CartTxt.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);

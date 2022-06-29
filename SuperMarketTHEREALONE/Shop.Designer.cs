@@ -32,25 +32,27 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.quantity1 = new System.Windows.Forms.Label();
+            this.description1 = new System.Windows.Forms.Label();
             this.Add1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Price1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.quantity2 = new System.Windows.Forms.Label();
+            this.description2 = new System.Windows.Forms.Label();
             this.Add2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Price2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.quantity3 = new System.Windows.Forms.Label();
+            this.description3 = new System.Windows.Forms.Label();
             this.Add3 = new System.Windows.Forms.Button();
             this.Price3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.next = new System.Windows.Forms.Button();
             this.previous = new System.Windows.Forms.Button();
-            this.description1 = new System.Windows.Forms.Label();
-            this.description2 = new System.Windows.Forms.Label();
-            this.description3 = new System.Windows.Forms.Label();
-            this.quantity1 = new System.Windows.Forms.Label();
-            this.quantity2 = new System.Windows.Forms.Label();
-            this.quantity3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPageCount = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -62,8 +64,8 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 649);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(13, 645);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 36);
             this.button1.TabIndex = 0;
@@ -74,12 +76,13 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(1348, 645);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "VIEW CART";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
@@ -97,6 +100,26 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FUTURE PRODUCT WILL BE ADD";
+            // 
+            // quantity1
+            // 
+            this.quantity1.AutoSize = true;
+            this.quantity1.ForeColor = System.Drawing.SystemColors.Control;
+            this.quantity1.Location = new System.Drawing.Point(227, 404);
+            this.quantity1.Name = "quantity1";
+            this.quantity1.Size = new System.Drawing.Size(111, 16);
+            this.quantity1.TabIndex = 9;
+            this.quantity1.Text = "WILL ADD SOON";
+            // 
+            // description1
+            // 
+            this.description1.AutoSize = true;
+            this.description1.ForeColor = System.Drawing.SystemColors.Control;
+            this.description1.Location = new System.Drawing.Point(13, 376);
+            this.description1.Name = "description1";
+            this.description1.Size = new System.Drawing.Size(111, 16);
+            this.description1.TabIndex = 8;
+            this.description1.Text = "WILL ADD SOON";
             // 
             // Add1
             // 
@@ -154,6 +177,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "FUTURE PRODUCT WILL BE ADD";
             // 
+            // quantity2
+            // 
+            this.quantity2.AutoSize = true;
+            this.quantity2.ForeColor = System.Drawing.SystemColors.Control;
+            this.quantity2.Location = new System.Drawing.Point(234, 404);
+            this.quantity2.Name = "quantity2";
+            this.quantity2.Size = new System.Drawing.Size(111, 16);
+            this.quantity2.TabIndex = 10;
+            this.quantity2.Text = "WILL ADD SOON";
+            // 
+            // description2
+            // 
+            this.description2.AutoSize = true;
+            this.description2.ForeColor = System.Drawing.SystemColors.Control;
+            this.description2.Location = new System.Drawing.Point(20, 376);
+            this.description2.Name = "description2";
+            this.description2.Size = new System.Drawing.Size(111, 16);
+            this.description2.TabIndex = 9;
+            this.description2.Text = "WILL ADD SOON";
+            // 
             // Add2
             // 
             this.Add2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -209,6 +252,26 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "FUTURE PRODUCT WILL BE ADD";
             // 
+            // quantity3
+            // 
+            this.quantity3.AutoSize = true;
+            this.quantity3.ForeColor = System.Drawing.SystemColors.Control;
+            this.quantity3.Location = new System.Drawing.Point(218, 404);
+            this.quantity3.Name = "quantity3";
+            this.quantity3.Size = new System.Drawing.Size(111, 16);
+            this.quantity3.TabIndex = 11;
+            this.quantity3.Text = "WILL ADD SOON";
+            // 
+            // description3
+            // 
+            this.description3.AutoSize = true;
+            this.description3.ForeColor = System.Drawing.SystemColors.Control;
+            this.description3.Location = new System.Drawing.Point(13, 376);
+            this.description3.Name = "description3";
+            this.description3.Size = new System.Drawing.Size(111, 16);
+            this.description3.TabIndex = 10;
+            this.description3.Text = "WILL ADD SOON";
+            // 
             // Add3
             // 
             this.Add3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -249,7 +312,7 @@
             // next
             // 
             this.next.Location = new System.Drawing.Point(1252, 581);
-            this.next.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.next.Margin = new System.Windows.Forms.Padding(4);
             this.next.Name = "next";
             this.next.Size = new System.Drawing.Size(100, 28);
             this.next.TabIndex = 4;
@@ -260,7 +323,7 @@
             // previous
             // 
             this.previous.Location = new System.Drawing.Point(60, 580);
-            this.previous.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previous.Margin = new System.Windows.Forms.Padding(4);
             this.previous.Name = "previous";
             this.previous.Size = new System.Drawing.Size(100, 28);
             this.previous.TabIndex = 5;
@@ -268,65 +331,25 @@
             this.previous.UseVisualStyleBackColor = true;
             this.previous.Click += new System.EventHandler(this.previous_Click);
             // 
-            // description1
+            // label1
             // 
-            this.description1.AutoSize = true;
-            this.description1.ForeColor = System.Drawing.SystemColors.Control;
-            this.description1.Location = new System.Drawing.Point(13, 376);
-            this.description1.Name = "description1";
-            this.description1.Size = new System.Drawing.Size(111, 16);
-            this.description1.TabIndex = 8;
-            this.description1.Text = "WILL ADD SOON";
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(60, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Page:";
             // 
-            // description2
+            // lblPageCount
             // 
-            this.description2.AutoSize = true;
-            this.description2.ForeColor = System.Drawing.SystemColors.Control;
-            this.description2.Location = new System.Drawing.Point(20, 376);
-            this.description2.Name = "description2";
-            this.description2.Size = new System.Drawing.Size(111, 16);
-            this.description2.TabIndex = 9;
-            this.description2.Text = "WILL ADD SOON";
-            // 
-            // description3
-            // 
-            this.description3.AutoSize = true;
-            this.description3.ForeColor = System.Drawing.SystemColors.Control;
-            this.description3.Location = new System.Drawing.Point(13, 376);
-            this.description3.Name = "description3";
-            this.description3.Size = new System.Drawing.Size(111, 16);
-            this.description3.TabIndex = 10;
-            this.description3.Text = "WILL ADD SOON";
-            // 
-            // quantity1
-            // 
-            this.quantity1.AutoSize = true;
-            this.quantity1.ForeColor = System.Drawing.SystemColors.Control;
-            this.quantity1.Location = new System.Drawing.Point(227, 404);
-            this.quantity1.Name = "quantity1";
-            this.quantity1.Size = new System.Drawing.Size(111, 16);
-            this.quantity1.TabIndex = 9;
-            this.quantity1.Text = "WILL ADD SOON";
-            // 
-            // quantity2
-            // 
-            this.quantity2.AutoSize = true;
-            this.quantity2.ForeColor = System.Drawing.SystemColors.Control;
-            this.quantity2.Location = new System.Drawing.Point(234, 404);
-            this.quantity2.Name = "quantity2";
-            this.quantity2.Size = new System.Drawing.Size(111, 16);
-            this.quantity2.TabIndex = 10;
-            this.quantity2.Text = "WILL ADD SOON";
-            // 
-            // quantity3
-            // 
-            this.quantity3.AutoSize = true;
-            this.quantity3.ForeColor = System.Drawing.SystemColors.Control;
-            this.quantity3.Location = new System.Drawing.Point(218, 404);
-            this.quantity3.Name = "quantity3";
-            this.quantity3.Size = new System.Drawing.Size(111, 16);
-            this.quantity3.TabIndex = 11;
-            this.quantity3.Text = "WILL ADD SOON";
+            this.lblPageCount.AutoSize = true;
+            this.lblPageCount.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPageCount.Location = new System.Drawing.Point(109, 26);
+            this.lblPageCount.Name = "lblPageCount";
+            this.lblPageCount.Size = new System.Drawing.Size(14, 16);
+            this.lblPageCount.TabIndex = 7;
+            this.lblPageCount.Text = "1";
             // 
             // Shop
             // 
@@ -334,6 +357,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1464, 688);
+            this.Controls.Add(this.lblPageCount);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.previous);
             this.Controls.Add(this.next);
             this.Controls.Add(this.groupBox2);
@@ -343,7 +368,7 @@
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Shop";
             this.Text = "Shop";
             this.Load += new System.EventHandler(this.Shop_Load);
@@ -357,6 +382,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -384,5 +410,7 @@
         private System.Windows.Forms.Label quantity1;
         private System.Windows.Forms.Label quantity2;
         private System.Windows.Forms.Label quantity3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPageCount;
     }
 }

@@ -112,7 +112,6 @@ namespace SuperMarketTHEREALONE
         {
             Application.Exit();
         }
-
         private void Forgor_Click(object sender, EventArgs e)
         {
             Forgor forgor = new Forgor();

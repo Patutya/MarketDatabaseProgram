@@ -10,68 +10,42 @@ namespace SuperMarketTHEREALONE
 
     public partial class Shop : Form
     {
-
+        int pager = 0,pageCounter = 1;
         public string cart = "";
         public double full = 0;
         public User user = new User();
         List<Products> products = new List<Products>();
-        int Num = 0;
-        Products first = new Products();
-        Products second = new Products();
-        Products third = new Products();
-        //--------------------------------------------
 
-        public Shop() { InitializeComponent(); }
+        string first = "";
+        string second = "";
+        string third = "";
+
+        //---------------------------------------------------------------
+
+        public Shop()
+        {
+            InitializeComponent();
+        }
         public Shop(User user)
         {
             this.user = user;
             InitializeComponent();
         }
+        private void Add1_Click(object sender, EventArgs e)
+        {
+            cart = cart + first;
+        }
+        private void Add2_Click(object sender, EventArgs e)
+        {
+            cart = cart + second;
+        }
+        private void Add3_Click(object sender, EventArgs e)
+        {
+            cart = cart + third;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-        private void PageLoader()
-        {
-            Num = products.Count;
-            Num -= 3;
-
-            Bitmap image1;
-            groupBox3.Text = products[2].ProductName;
-            Price3.Text = Convert.ToString(products[2].ProductPrice)+ "$$";
-            description3.Text = products[2].ProductSummary;
-            quantity3.Text = Convert.ToString(products[2].ProductQuantity);
-            using (MemoryStream stream = new MemoryStream(products[2].ProductImage))
-            {
-                image1 = new Bitmap(stream);
-            }
-            pictureBox3.Image = image1;
-
-
-
-            Bitmap image2;
-            groupBox2.Text = products[1].ProductName;
-            Price2.Text = Convert.ToString(products[1].ProductPrice) + "$$";
-            description2.Text = products[1].ProductSummary;
-            quantity2.Text = Convert.ToString(products[1].ProductQuantity);
-            using (MemoryStream stream = new MemoryStream(products[1].ProductImage))
-            {
-                image2 = new Bitmap(stream);
-            }
-            pictureBox2.Image = image2;
-
-
-
-            Bitmap image3;
-            groupBox1.Text = products[0].ProductName;
-            Price1.Text = Convert.ToString(products[0].ProductPrice) + "$$";
-            description1.Text = products[0].ProductSummary;
-            quantity1.Text = Convert.ToString(products[0].ProductQuantity);
-            using (MemoryStream stream = new MemoryStream(products[0].ProductImage))
-            {
-                image3 = new Bitmap(stream);
-            }
-            pictureBox1.Image = image3;
         }
         private void LoadProducts()
         {
@@ -101,38 +75,104 @@ namespace SuperMarketTHEREALONE
                     products.Add(product);
                 }
             }
+            pager = products.Count;
+            pager--;
+        }
+        private void Shop_Load(object sender, EventArgs e)
+        {
+            LoadProducts();
+            PageLoader();
+        }
+        private void previous_Click(object sender, EventArgs e)
+        {
+            
+            if (pager == 5)
+            {
+                pageCounter = products.Count / 3;
+                pager = 2;
+                PageLoader();
+            }
+            else
+            {
+                pager = pager + 3;
+                PageLoader();
+                pageCounter--;
+            }
+            lblPageCount.Text = Convert.ToString(pageCounter);
+        }
+        private void next_Click(object sender, EventArgs e)
+        {
+            if (pager == 2)
+            {
+                pager = products.Count;
+                pager--;
+                PageLoader();
+                pageCounter = 1;
+            }
+            else
+            {
+                pageCounter++;
+                pager = pager - 3;
+                PageLoader();
+            }
+            lblPageCount.Text = Convert.ToString(pageCounter);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cart art = new Cart(cart,full);
+            art.Show(); 
+        }
+
+        private void PageLoader()
+        {
+            
+            Bitmap image1;
+            groupBox3.Text = products[pager].ProductName;
+            Price3.Text = Convert.ToString(products[pager].ProductPrice) + "$$";
+            description3.Text = products[pager].ProductSummary;
+            quantity3.Text = Convert.ToString(products[pager].ProductQuantity);
+            using (MemoryStream stream = new MemoryStream(products[pager].ProductImage))
+            {
+                image1 = new Bitmap(stream);
+            }
+            pictureBox3.Image = image1;
+            third = products[pager].ProductName + "  " + products[pager].ProductPrice + "$$  " + products[pager].ProductSummary + "\n";
+
+            Bitmap image2;
+            groupBox2.Text = products[pager-1].ProductName;
+            Price2.Text = Convert.ToString(products[pager - 1].ProductPrice) + "$$";
+            description2.Text = products[pager - 1].ProductSummary;
+            quantity2.Text = Convert.ToString(products[pager - 1].ProductQuantity);
+            using (MemoryStream stream = new MemoryStream(products[pager - 1].ProductImage))
+            {
+                image2 = new Bitmap(stream);
+            }
+            pictureBox2.Image = image2;
+            second = products[pager - 1].ProductName + "  " + products[pager - 1].ProductPrice + "$$  " + products[pager - 1].ProductSummary + "\n";
+
+
+
+
+            Bitmap image3;
+            groupBox1.Text = products[pager-2].ProductName;
+            Price1.Text = Convert.ToString(products[pager - 2].ProductPrice) + "$$";
+            description1.Text = products[pager - 2].ProductSummary;
+            quantity1.Text = Convert.ToString(products[pager - 2].ProductQuantity);
+            using (MemoryStream stream = new MemoryStream(products[pager - 2].ProductImage))
+            {
+                image3 = new Bitmap(stream);
+            }
+            pictureBox1.Image = image3;
+            first = products[pager - 2].ProductName + "  " + products[pager - 2].ProductPrice + "$$  " + products[pager - 2].ProductSummary + "\n";
+
         }
         // DONE  /|\
         //        |    |
         // INPRGR CODE V
 
-        private void Shop_Load(object sender, EventArgs e)
-        {
-            LoadProducts();
-            PageLoader();
 
-        }
-        private void Add1_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void Add2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Add3_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void previous_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void next_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 /*

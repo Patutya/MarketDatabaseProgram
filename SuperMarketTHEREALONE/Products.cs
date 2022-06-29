@@ -4,7 +4,7 @@
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
-        public string ProductSummary { get; set; }
+        public string ProductSummary { get; set; } 
         public double ProductPrice { get; set; }
         public int ProductQuantity { get; set; }
         public byte[] ProductImage { get; set; }
